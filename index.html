@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт-визитка</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: #333;
+            color: white;
+            padding: 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .hero {
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .cards {
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .card {
+            flex: 1;
+            padding: 25px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            background: #333;
+            color: white;
+            padding: 20px;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin-left: 10px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .cards {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <h2>Мой сайт</h2>
+
+            <div>
+                <a href="#about">Обо мне</a>
+                <a href="#skills">Навыки</a>
+                <a href="#contact">Контакты</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <h1>Привет! Я Акнур начинающий IT-специалист</h1>
+            <p id="message">
+                Изучаю HTML, CSS и JavaScript и развиваюсь в сфере IT.
+            </p>
+
+            <button id="myButton">
+                Нажми меня
+            </button>
+        </section>
+
+        <section id="about">
+            <h2>Обо мне</h2>
+            <p>
+                Я изучаю веб-разработку и создаю свои первые проекты.
+                Мне интересно программирование, технологии и создание
+                современных веб-сайтов.
+            </p>
+        </section>
+
+        <section id="skills">
+            <h2>Мои навыки</h2>
+
+            <div class="cards">
+                <div class="card">
+                    <h3>HTML</h3>
+                    <p>Создание структуры веб-страниц.</p>
+                </div>
+
+                <div class="card">
+                    <h3>CSS</h3>
+                    <p>Создание стилей и адаптивного дизайна.</p>
+                </div>
+
+                <div class="card">
+                    <h3>JavaScript</h3>
+                    <p>Добавление интерактивности на страницу.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Контакты</h2>
+            <p>Email: example@mail.com</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Мой сайт-визитка</p>
+    </footer>
+
+    <script>
+        const button = document.getElementById("myButton");
+        const message = document.getElementById("message");
+
+        button.addEventListener("click", function() {
+            message.textContent = "Спасибо за посещение моего сайта!";
+        });
+    </script>
+
+</body>
+</html>
