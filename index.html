@@ -1,184 +1,617 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="kk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Сайт-визитка</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+    <title>Ақнұр | IT портфолио</title>
 
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        header {
-            background: #333;
-            color: white;
-            padding: 20px;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1000px;
-            margin: auto;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-        }
-
-        section {
-            padding: 60px 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
-
-        .hero {
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 40px;
-            margin-bottom: 15px;
-        }
-
-        .cards {
-            display: flex;
-            gap: 20px;
-            justify-content: space-between;
-        }
-
-        .card {
-            flex: 1;
-            padding: 25px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-        }
-
-        button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-        }
-
-        footer {
-            text-align: center;
-            background: #333;
-            color: white;
-            padding: 20px;
-        }
-
-        /* Адаптивность */
-        @media (max-width: 600px) {
-            nav {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            nav a {
-                margin-left: 10px;
-            }
-
-            .hero h1 {
-                font-size: 30px;
-            }
-
-            .cards {
-                flex-direction: column;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <nav>
-            <h2>Мой сайт</h2>
+    <!-- Навигация -->
+    <header class="header">
 
-            <div>
-                <a href="#about">Обо мне</a>
-                <a href="#skills">Навыки</a>
-                <a href="#contact">Контакты</a>
+        <nav class="navbar">
+
+            <a href="#home" class="logo">
+                <span>✦</span> Aknur
+            </a>
+
+            <div class="nav-links">
+                <a href="#home">Басты бет</a>
+                <a href="#about">Мен туралы</a>
+                <a href="#skills">Дағдылар</a>
+                <a href="#projects">Жобалар</a>
+                <a href="#contact">Байланыс</a>
             </div>
+
+            <button class="menu-btn" id="menuBtn">☰</button>
+
         </nav>
+
     </header>
+
 
     <main>
 
-        <section class="hero">
-            <h1>Привет! Я Акнур начинающий IT-специалист</h1>
-            <p id="message">
-                Изучаю HTML, CSS и JavaScript и развиваюсь в сфере IT.
-            </p>
+        <!-- Басты бет -->
+        <section id="home" class="hero">
 
-            <button id="myButton">
-                Нажми меня
-            </button>
-        </section>
+            <div class="hero-content">
 
-        <section id="about">
-            <h2>Обо мне</h2>
-            <p>
-                Я изучаю веб-разработку и создаю свои первые проекты.
-                Мне интересно программирование, технологии и создание
-                современных веб-сайтов.
-            </p>
-        </section>
-
-        <section id="skills">
-            <h2>Мои навыки</h2>
-
-            <div class="cards">
-                <div class="card">
-                    <h3>HTML</h3>
-                    <p>Создание структуры веб-страниц.</p>
+                <div class="badge">
+                    ✦ Болашақ IT маманы
                 </div>
 
-                <div class="card">
-                    <h3>CSS</h3>
-                    <p>Создание стилей и адаптивного дизайна.</p>
+                <h1>
+                    Сәлем! Мен
+                    <span>Ақнұрмын</span>
+                </h1>
+
+                <h2>
+                    Веб-әзірлеуді үйреніп жүрген студент
+                </h2>
+
+                <p>
+                    Мен заманауи веб-сайттар жасауды, бағдарламалауды
+                    және жаңа технологияларды үйреніп жүрмін.
+                    Бұл сайт — менің білімім, жобаларым және IT саласындағы
+                    даму жолым туралы шағын портфолиом.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#about" class="btn primary">
+                        Мен туралы →
+                    </a>
+
+                    <a href="#projects" class="btn secondary">
+                        Жобаларым
+                    </a>
+
                 </div>
 
-                <div class="card">
-                    <h3>JavaScript</h3>
-                    <p>Добавление интерактивности на страницу.</p>
-                </div>
             </div>
+
+
+            <!-- 3D элемент -->
+            <div class="hero-visual">
+
+                <div class="orb orb-1"></div>
+                <div class="orb orb-2"></div>
+
+                <div class="code-card">
+
+                    <div class="window-top">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="code">
+                        <p><span class="purple">const</span> developer = {</p>
+
+                        <p class="indent">
+                            name:
+                            <span class="green">'Ақнұр'</span>,
+                        </p>
+
+                        <p class="indent">
+                            direction:
+                            <span class="green">'IT'</span>,
+                        </p>
+
+                        <p class="indent">
+                            skills:
+                            <span class="green">'HTML, CSS, JS'</span>,
+                        </p>
+
+                        <p class="indent">
+                            goal:
+                            <span class="green">'Grow'</span>
+                        </p>
+
+                        <p>};</p>
+
+                        <p class="cursor">▌</p>
+                    </div>
+
+                </div>
+
+            </div>
+
         </section>
 
-        <section id="contact">
-            <h2>Контакты</h2>
-            <p>Email: example@mail.com</p>
+
+        <!-- Мен туралы -->
+        <section id="about" class="section">
+
+            <div class="section-title">
+                <span>01</span>
+                <h2>Мен туралы</h2>
+                <p>Өзім және IT саласындағы даму жолым</p>
+            </div>
+
+
+            <div class="about-grid">
+
+                <div class="about-card main-card">
+
+                    <div class="card-icon">👩🏻‍💻</div>
+
+                    <h3>Мен кіммін?</h3>
+
+                    <p>
+                        Менің атым — Ақнұр. Мен ақпараттық технологиялар
+                        саласына қызығушылық танытып жүрген студентпін.
+                        Қазіргі уақытта веб-әзірлеудің негіздерін,
+                        бағдарламалауды және заманауи цифрлық құралдарды
+                        үйреніп жүрмін.
+                    </p>
+
+                    <p>
+                        Мен үшін IT — тек код жазу емес. Бұл жаңа идеяларды
+                        жүзеге асыруға, мәселелерді шешуге және өзіңді
+                        үнемі дамытуға мүмкіндік беретін қызықты сала.
+                    </p>
+
+                </div>
+
+
+                <div class="about-card">
+
+                    <div class="small-icon">🎯</div>
+
+                    <h3>Мақсатым</h3>
+
+                    <p>
+                        Жақсы веб-әзірлеуші болып, өз жобаларымды
+                        өз бетімше жасай алатын деңгейге жету.
+                    </p>
+
+                </div>
+
+
+                <div class="about-card">
+
+                    <div class="small-icon">🚀</div>
+
+                    <h3>Қазір не істеп жүрмін?</h3>
+
+                    <p>
+                        HTML, CSS, JavaScript және GitHub арқылы
+                        практикалық жобалар жасап, тәжірибе жинап жүрмін.
+                    </p>
+
+                </div>
+
+
+                <div class="about-card">
+
+                    <div class="small-icon">💡</div>
+
+                    <h3>Қызығушылығым</h3>
+
+                    <p>
+                        Веб-дизайн, бағдарламалау, цифрлық технологиялар
+                        және жаңа IT құралдарын зерттеу.
+                    </p>
+
+                </div>
+
+
+                <div class="about-card">
+
+                    <div class="small-icon">📚</div>
+
+                    <h3>Үйрену принципім</h3>
+
+                    <p>
+                        Теорияны практикамен біріктіріп, әр үйренген
+                        технологиям бойынша шағын жоба жасау.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Дағдылар -->
+        <section id="skills" class="section skills-section">
+
+            <div class="section-title">
+                <span>02</span>
+                <h2>Менің дағдыларым</h2>
+                <p>Қазір үйреніп жатқан технологияларым</p>
+            </div>
+
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+
+                    <div class="skill-top">
+                        <div class="skill-logo html">5</div>
+
+                        <div>
+                            <h3>HTML</h3>
+                            <p>Веб құрылым</p>
+                        </div>
+
+                        <strong>90%</strong>
+                    </div>
+
+                    <div class="progress">
+                        <div style="width: 90%"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <div class="skill-top">
+                        <div class="skill-logo css">3</div>
+
+                        <div>
+                            <h3>CSS</h3>
+                            <p>Веб дизайн</p>
+                        </div>
+
+                        <strong>85%</strong>
+                    </div>
+
+                    <div class="progress">
+                        <div style="width: 85%"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <div class="skill-top">
+                        <div class="skill-logo js">JS</div>
+
+                        <div>
+                            <h3>JavaScript</h3>
+                            <p>Интерактивтілік</p>
+                        </div>
+
+                        <strong>75%</strong>
+                    </div>
+
+                    <div class="progress">
+                        <div style="width: 75%"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <div class="skill-top">
+                        <div class="skill-logo git">◆</div>
+
+                        <div>
+                            <h3>Git & GitHub</h3>
+                            <p>Жобаларды басқару</p>
+                        </div>
+
+                        <strong>70%</strong>
+                    </div>
+
+                    <div class="progress">
+                        <div style="width: 70%"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <div class="skill-top">
+                        <div class="skill-logo python">Py</div>
+
+                        <div>
+                            <h3>Python</h3>
+                            <p>Бағдарламалау</p>
+                        </div>
+
+                        <strong>60%</strong>
+                    </div>
+
+                    <div class="progress">
+                        <div style="width: 60%"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <div class="skill-top">
+                        <div class="skill-logo vscode">&lt;/&gt;</div>
+
+                        <div>
+                            <h3>VS Code</h3>
+                            <p>Код редакторы</p>
+                        </div>
+
+                        <strong>85%</strong>
+                    </div>
+
+                    <div class="progress">
+                        <div style="width: 85%"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Жобалар -->
+        <section id="projects" class="section">
+
+            <div class="section-title">
+                <span>03</span>
+                <h2>Менің жобаларым</h2>
+                <p>Үйрену барысында жасап жатқан жобаларым</p>
+            </div>
+
+
+            <div class="projects-grid">
+
+                <article class="project-card">
+
+                    <div class="project-number">01</div>
+
+                    <div class="project-icon">🌐</div>
+
+                    <h3>Жеке сайт-визитка</h3>
+
+                    <p>
+                        Өзім туралы ақпарат, дағдыларым мен жобаларымды
+                        көрсететін адаптивті жеке веб-сайт.
+                    </p>
+
+                    <div class="tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+
+                    <button class="project-btn">
+                        Толығырақ →
+                    </button>
+
+                </article>
+
+
+                <article class="project-card featured">
+
+                    <div class="project-number">02</div>
+
+                    <div class="project-icon">✅</div>
+
+                    <h3>Task Manager</h3>
+
+                    <p>
+                        Күнделікті тапсырмаларды қосуға, басқаруға және
+                        орындалған жұмыстарды белгілеуге арналған
+                        қарапайым веб-қосымша.
+                    </p>
+
+                    <div class="tags">
+                        <span>JavaScript</span>
+                        <span>CSS</span>
+                    </div>
+
+                    <button class="project-btn">
+                        Толығырақ →
+                    </button>
+
+                </article>
+
+
+                <article class="project-card">
+
+                    <div class="project-number">03</div>
+
+                    <div class="project-icon">☁️</div>
+
+                    <h3>Ауа райы қосымшасы</h3>
+
+                    <p>
+                        Қала бойынша ауа райы туралы ақпаратты көрсетуге
+                        арналған шағын веб-жоба.
+                    </p>
+
+                    <div class="tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>API</span>
+                    </div>
+
+                    <button class="project-btn">
+                        Толығырақ →
+                    </button>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Мақсаттар -->
+        <section class="section goals">
+
+            <div class="section-title">
+                <span>04</span>
+                <h2>Менің мақсаттарым</h2>
+                <p>Алдағы уақытта жеткім келетін нәтижелер</p>
+            </div>
+
+
+            <div class="goals-grid">
+
+                <div class="goal">
+                    <span>01</span>
+                    <h3>Код жазуды жетілдіру</h3>
+                    <p>
+                        JavaScript және басқа бағдарламалау тілдерін
+                        тереңірек үйрену.
+                    </p>
+                </div>
+
+                <div class="goal">
+                    <span>02</span>
+                    <h3>Портфолио жинау</h3>
+                    <p>
+                        GitHub-та бірнеше толыққанды жобалар жасап,
+                        тәжірибемді көрсету.
+                    </p>
+                </div>
+
+                <div class="goal">
+                    <span>03</span>
+                    <h3>Тәжірибе жинау</h3>
+                    <p>
+                        Нақты жобалар арқылы практикалық тәжірибемді
+                        арттыру.
+                    </p>
+                </div>
+
+                <div class="goal">
+                    <span>04</span>
+                    <h3>IT маманы болу</h3>
+                    <p>
+                        Болашақта IT саласында өз орнымды тауып,
+                        кәсіби маман болу.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Байланыс -->
+        <section id="contact" class="section contact-section">
+
+            <div class="contact-box">
+
+                <div class="contact-info">
+
+                    <div class="section-title left">
+                        <span>05</span>
+                        <h2>Байланыс</h2>
+                        <p>
+                            Маған хабарласқыңыз келсе, төмендегі
+                            байланыс мәліметтерін пайдалана аласыз.
+                        </p>
+                    </div>
+
+
+                    <div class="contact-item">
+                        <div class="contact-icon">✉</div>
+
+                        <div>
+                            <small>Email</small>
+                            <p>abdrash.aknur07@gmail.com</p>
+                        </div>
+                    </div>
+
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+
+                        <div>
+                            <small>Телефон</small>
+                            <p>+7 705 513 05 20</p>
+                        </div>
+                    </div>
+
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+
+                        <div>
+                            <small>Орналасқан жері</small>
+                            <p>Алматы қаласы</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <form id="contactForm" class="contact-form">
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Атыңыз"
+                    >
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Email"
+                    >
+
+                    <textarea
+                        id="messageInput"
+                        placeholder="Хабарламаңызды жазыңыз..."
+                    ></textarea>
+
+                    <button type="submit" class="send-btn">
+                        Хабарлама жіберу →
+                    </button>
+
+                    <p id="formMessage"></p>
+
+                </form>
+
+            </div>
+
         </section>
 
     </main>
 
-    <footer>
-        <p>© 2026 Мой сайт-визитка</p>
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div class="logo">
+                <span>✦</span> Aknur
+            </div>
+
+            <p>
+                © 2026 Ақнұр. Барлық құқықтар қорғалған.
+            </p>
+
+            <div class="socials">
+                <a href="#">GitHub</a>
+                <a href="#">Instagram</a>
+                <a href="#">Telegram</a>
+            </div>
+
+        </div>
+
     </footer>
 
-    <script>
-        const button = document.getElementById("myButton");
-        const message = document.getElementById("message");
 
-        button.addEventListener("click", function() {
-            message.textContent = "Спасибо за посещение моего сайта!";
-        });
-    </script>
+    <script src="script.js"></script>
 
 </body>
 </html>
